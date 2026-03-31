@@ -7703,7 +7703,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Al the previous commands exist and work the same if you had a DF from pandas. But now we have a new column type: <strong>geometry</strong>, and we can have some extra functiond from <em>geopandas</em>:</p>
+<p>All the previous commands exist and work the same if you had a DF from pandas. But now we have a new column type: <strong>geometry</strong>, and we can have some extra functions from <em>geopandas</em>:</p>
 </div>
 </div>
 </div>
@@ -7844,7 +7844,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>As we can see above, the rivers was a map of <strong>lines</strong>, while the cities were a map of <strong>points</strong>.</p>
+<p>As we can see above, the rivers was a map of <strong>lines</strong>, while the cities was a map of <strong>points</strong>.</p>
 </div>
 </div>
 </div>
@@ -7942,7 +7942,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>In all the previous cases, you see a common CRS (EPSG 4326), and also that their axes are in <strong>long</strong> / <strong>lat</strong> (measured in <em>degrees</em>). That is a clear sign the the map is <strong>NOT projected</strong>.</p>
+<p>In all the previous cases, you see a common CRS (EPSG 4326), and also that their axes are in <strong>long</strong> / <strong>lat</strong> (measured in <em>degrees</em>). That is a clear sign that the map is <strong>NOT projected</strong>.</p>
 <p>At this point, let me keep one country:</p>
 </div>
 </div>
@@ -7995,7 +7995,7 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># check units of measurement</span>
-<span class="n">brazil</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">axis_info</span>
+<span class="n">brazil</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">axis_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">unit_name</span><span class="p">,</span> <span class="n">brazil</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">axis_info</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">unit_name</span>
 </pre></div>
 </div>
 </div>
@@ -8023,7 +8023,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The fact it is not projected, means that no operation involving distances gives reliable nor consistente results. For instance, we know Polygons have a centroid; but when we try getting a centroid from an <strong>unprojected</strong> polygon, you get:</p>
+<p>The fact the geometries are not projected mean that no operation involving distances gives reliable nor consistent results. For instance, we know Polygons have a centroid; but when we try getting a centroid from an <strong>unprojected</strong> polygon, you get:</p>
 </div>
 </div>
 </div>
@@ -8078,7 +8078,7 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># recommended from website</span>
-<span class="n">brazil</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5641</span><span class="p">)</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">axis_info</span>
+<span class="n">brazil</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5641</span><span class="p">)</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">axis_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">unit_name</span><span class="p">,</span> <span class="n">brazil</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5641</span><span class="p">)</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">axis_info</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">unit_name</span>
 </pre></div>
 </div>
 </div>
@@ -8108,7 +8108,7 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># recommended from Gemini - after a long chat!</span>
-<span class="n">brazil</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5880</span><span class="p">)</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">axis_info</span>
+<span class="n">brazil</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5880</span><span class="p">)</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">axis_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">unit_name</span><span class="p">,</span><span class="n">brazil</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5880</span><span class="p">)</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">axis_info</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">unit_name</span>
 </pre></div>
 </div>
 </div>
@@ -8151,7 +8151,7 @@ a.anchor-link {
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># replotting:</span>
 
 <span class="n">base5880</span><span class="o">=</span><span class="n">brazil</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5880</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-<span class="n">brazil</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5641</span><span class="p">)</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">base5880</span><span class="p">)</span>
+<span class="n">brazil</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5880</span><span class="p">)</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">base5880</span><span class="p">)</span>
 <span class="n">brazil</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5880</span><span class="p">)</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'lightgreen'</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">base5880</span><span class="p">)</span>
 <span class="n">brazil</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">base5880</span><span class="p">)</span>
 </pre></div>
@@ -8300,7 +8300,7 @@ a.anchor-link {
 
 <span class="n">infoairports</span><span class="o">=</span><span class="n">infoairports</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">keep</span><span class="p">]</span> <span class="c1"># 'loc' when you have column names</span>
 
-<span class="c1"># less columns.</span>
+<span class="c1"># less columns</span>
 
 <span class="n">infoairports</span><span class="o">.</span><span class="n">info</span><span class="p">()</span> <span class="c1"># checking data types</span>
 </pre></div>
@@ -8719,10 +8719,53 @@ a.anchor-link {
 <span class="c1"># new column (optional)</span>
 <span class="n">centroids</span><span class="p">[</span><span class="s1">'country'</span><span class="p">]</span><span class="o">=</span><span class="s1">'Brazil'</span>
 
-<span class="c1"># renaming the geometry column</span>
+<span class="n">centroids</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># renaming the geometry column</span>
 <span class="n">centroids</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">'geometry'</span><span class="p">},</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="c1">#setting the geometry (the name is not enough)</span>
+<span class="n">centroids</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># why this is bad?</span>
+<span class="n">centroids</span><span class="o">.</span><span class="n">crs</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#setting the geometry (the name is not enough)</span>
 <span class="n">centroids</span> <span class="o">=</span> <span class="n">centroids</span><span class="o">.</span><span class="n">set_geometry</span><span class="p">(</span><span class="s2">"geometry"</span><span class="p">)</span>
 
 <span class="c1"># verifying:</span>
@@ -8778,10 +8821,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">linkGitSession</span><span class="o">=</span><span class="s1">'https://github.com/CienciaDeDatosEspacial/dataSets/raw/main/'</span>
-
-
-<span class="n">brazil_states</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">linkGitSession</span><span class="o">+</span><span class="s1">'BRAZIL/bra_admbnda_adm1_ibge_2020.zip'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil_states</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">linkGitSession</span><span class="o">+</span><span class="s1">'BRAZIL/bra_admbnda_adm1_ibge_2020.zip'</span><span class="p">)</span>
 <span class="n">brazil_municipalities</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">linkGitSession</span><span class="o">+</span><span class="s1">'BRAZIL/bra_admbnda_adm2_ibge_2020.zip'</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8888,7 +8928,7 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">## uncomment this to see the error message</span>
-<span class="c1"># brazil_states.to_crs(5880)</span>
+<span class="n">brazil_states</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5880</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8965,7 +9005,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Saving">Saving<a class="anchor-link" href="#Saving">¶</a></h1><p>We will create a file readabel by R or Python, in this case a GeoPackage file (<strong>.gpkg</strong>). This file allows you to save all the previous maps as <strong>layers</strong> in <strong>one</strong> file.</p>
+<h1 id="Saving">Saving<a class="anchor-link" href="#Saving">¶</a></h1><p>We will create a file readable by R or Python, in this case a GeoPackage file (<strong>.gpkg</strong>). This file allows you to save all the previous maps as <strong>layers</strong> in <strong>one</strong> file.</p>
 </div>
 </div>
 </div>
@@ -9099,8 +9139,8 @@ brazil_5880,cities_brazil_5880, airports_gdf_5880, brazil_states_5880, brazil_mu
 <span class="n">brazil_states_5880</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'ADM0_EN'</span><span class="p">,</span> <span class="s1">'ADM0_PT'</span><span class="p">,</span> <span class="s1">'ADM0_PCODE'</span><span class="p">],</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">brazil_states_5880</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'ADM1_PT'</span><span class="p">:</span><span class="s1">'state_name'</span><span class="p">,</span><span class="s1">'ADM1_PCODE'</span><span class="p">:</span><span class="s1">'state_code'</span><span class="p">},</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="n">brazil_municipalities_5880</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'ADM0_EN'</span><span class="p">,</span> <span class="s1">'ADM0_PT'</span><span class="p">,</span> <span class="s1">'ADM0_PCODE'</span><span class="p">,</span><span class="s1">'ET_ID'</span><span class="p">,</span><span class="s1">'ADM1_PT'</span><span class="p">],</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">brazil_municipalities_5880</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'ADM1_PCODE'</span><span class="p">:</span><span class="s1">'state_code'</span><span class="p">,</span><span class="s1">'ADM2_PT'</span><span class="p">:</span><span class="s2">"municipality_name"</span><span class="p">,</span>
+<span class="n">brazil_municipalities_5880</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'ADM0_EN'</span><span class="p">,</span> <span class="s1">'ADM0_PT'</span><span class="p">,</span> <span class="s1">'ADM0_PCODE'</span><span class="p">,</span><span class="s1">'ET_ID'</span><span class="p">],</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">brazil_municipalities_5880</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'ADM1_PT'</span><span class="p">:</span><span class="s1">'state_name'</span><span class="p">,</span><span class="s1">'ADM1_PCODE'</span><span class="p">:</span><span class="s1">'state_code'</span><span class="p">,</span><span class="s1">'ADM2_PT'</span><span class="p">:</span><span class="s2">"municipality_name"</span><span class="p">,</span>
        <span class="s1">'ADM2_PCODE'</span><span class="p">:</span><span class="s2">"municipality_code"</span><span class="p">},</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
